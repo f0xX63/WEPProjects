@@ -425,7 +425,8 @@ button {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=tel] {
     outline: none;
     border: 1px solid black;
     background: transparent;
@@ -588,5 +589,22 @@ button:hover {
 .half-size-conteiner {
     width: 50%;
     float: left;
+    display: inline-block;
+}
+
+.btn-group {
+    display: inline-block;
+}
+
+.btn-group button {
+    width: auto;
+    height: 40px;
+    border: none;
+    background-color: #4444ee;
+    color: #fff;
+}
+
+.full-size-container {
+    width: 100%;
     display: inline-block;
 }
