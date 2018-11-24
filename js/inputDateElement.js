@@ -1,4 +1,4 @@
-var date = document.getElementById('date');
+var date = document.getElementsByName('date')[0];
 
 function checkValue(str, max) {
     if (str.charAt(0) !== '0' || str == '00') {
