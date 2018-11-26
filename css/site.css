@@ -128,8 +128,8 @@ ul li a {
 
 .gallery .box {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 23.2%;
+    height: 23.2%;
     background: #b0c4de;
     margin: 10px;
     box-sizing: border-box;
@@ -673,4 +673,48 @@ button:hover {
 #nextBtn:hover,
 #previousBtn:hover {
     opacity: 1;
+}
+
+.article-post {
+    padding: 30px;
+    padding-top: 0px;
+    display: block;
+    max-width: 950px;
+    width: auto;
+    transition: padding 0.55s ease;
+}
+
+.article-post .article-header {
+    display: block;
+}
+
+.article-header h1 {
+    font-size: 4.9rem;
+    margin-top: 0.5em;
+    margin: 0.5em 0;
+    text-rendering: optimizelegibility;
+}
+
+.article-post .article-content {
+    margin-left: auto;
+    margin-right: 3%;
+    max-width: 625px;
+    width: auto;
+    margin-top: 1em;
+    transition: margin 0.2s;
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1.5;
+    color: #555555;
+}
+
+.article-content p {
+    margin-bottom: 1.5em;
+    margin: 0.75em 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1.5rem;
 }

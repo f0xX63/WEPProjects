@@ -3,7 +3,7 @@ var modal = document.querySelector(".modal");
 var closeBtn = document.querySelector(".close-button");
 
 const slider = document.querySelector('.slider');
-const sliderImages = document.querySelectorAll('.slider img');
+const sliderImages = Array.prototype.slice.call(document.querySelectorAll('.slider img'));
 
 const nextBtn = document.getElementById('nextBtn');
 const previousBtn = document.getElementById('previousBtn');
@@ -11,10 +11,9 @@ const previousBtn = document.getElementById('previousBtn');
 var counter = 0;
 const size = sliderImages[0].clientWidth;
 
+
 closeBtn.addEventListener("click", function() {
     modal.classList.toggle("show-modal");
-    counter = 0;
-    slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 
 window.addEventListener("click", function(event) {
@@ -28,10 +27,11 @@ function toggleModal() {
 }
 
 for (let item in photos) {
-    photos[item].onclick = function() {
+    photos[item].onclick = function(event) {
         modal.classList.toggle("show-modal");
-        alert('you clicked by photo');
-        counter = 0;
+        var currentPhoto = event.currentTarget.firstElementChild.firstElementChild;
+        counter = sliderImages.findIndex(item => item.src === currentPhoto.src);
+        slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
     };
 }
 
