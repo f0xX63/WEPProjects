@@ -25,7 +25,6 @@
                         <li><a href="beauty_health.html">Beauty&Healthy</a></li>
                         <li><a href="lists.html">Lists</a></li>
                         <li><a href="travels.html">Travels</a></li>
-                        <li><a href="videos.html">Videos</a></li>
                     </ul>
                 </li>
                 <li><a href="photos.html">Photos</a></li>
@@ -48,55 +47,55 @@
                 <h2>Sign In</h2>
                 <form method="POST" onsubmit="return checkUser();">
                     <div class="input-group">
-                        <label for="user-email-input">Email:</label>
-                        <input type="text" name="email" id="user-email-input" placeholder="Enter email">
-                        <div class="error-msg" id="mail-error"></div>
+                        <label for="signIn-email">Email:</label>
+                        <input type="text" id="signIn-email" placeholder="Enter email">
+                        <div class="error-msg" id="signIn-email-error"></div>
                     </div>
                     <div class="input-group">
                         <label for="user-password-input">Password:</label>
-                        <input type="password" name="password" id="user-password-input" placeholder="Enter password">
-                        <div class="error-msg" id="password-error"></div>
+                        <input type="password" id="signIn-password" placeholder="Enter password">
+                        <div class="error-msg" id="signIn-password-error"></div>
                     </div>
-                    <button type="submit" id="sign-in">Sign In</button>
-                    <button type="button" id="btn-registration">Registration</button>
+                    <button type="submit" id="signIn-btn">Sign In</button>
+                    <button type="button" id="registration-btn">Registration</button>
                 </form>
             </div>
         </div>
         <!-- Modal Window -->
-        <!-- <div class="modal">
+        <div class="modal">
             <div class="modal-content">
                 <span class="close-button">×</span>
                 <div class="modal-header">
                     <h2>Create account</h2>
                 </div>
-                <form>
+                <form method="POST" onsubmit="return checkNewUser();">
                     <div class="form-group">
                         <div class="half-size-conteiner">
-                            <input type="text" name="email" placeholder="E-mail" id="modal-email-reg">
-                            <div class="error-msg" id="modal-mail-error"></div>
+                            <input type="text" placeholder="E-mail" id="modal-email-reg">
+                            <div class="error-msg" id="modal-email-error"></div>
                         </div>
                         <div class="half-size-conteiner">
-                            <input type="text" name="login" placeholder="Login" id="modal-login-reg">
+                            <input type="text" placeholder="Login" id="modal-login-reg">
                             <div class="error-msg" id="modal-login-error"></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="half-size-conteiner">
-                            <input type="text" name="name" placeholder="Your Name" id="modal-name-reg">
+                            <input type="text" placeholder="Your Name" id="modal-name-reg">
                             <div class="error-msg" id="modal-name-error"></div>
                         </div>
                         <div class="half-size-conteiner">
-                            <input type="text" name="surname" placeholder="Your Surname" id="modal-surname-reg">
+                            <input type="text" placeholder="Your Surname" id="modal-surname-reg">
                             <div class="error-msg" id="modal-surname-error"></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="half-size-conteiner">
-                            <input type="password" name="Password" placeholder="Password" id="modal-password-reg">
+                            <input type="password" placeholder="Password" id="modal-password-reg">
                             <div class="error-msg" id="modal-password-error"></div>
                         </div>
                         <div class="half-size-conteiner">
-                            <input type="password" name="Comfire_Password" placeholder="Comfire Password" id="modal-comfire-password-reg">
+                            <input type="password" placeholder="Comfire Password" id="modal-comfire-password-reg">
                             <div class="error-msg" id="modal-comfire-password-error"></div>
                         </div>
                     </div>
@@ -138,7 +137,7 @@
                         </div>
                 </form>
                 </div>
-            </div> -->
+            </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/signIn.js"></script>
@@ -146,7 +145,6 @@
     <script src="js/comboBoxElement.js"></script>
     <script src="js/floatingHeader.js"></script>
     <script src="js/modalRegistrationForm.js"></script>
-
 </body>
 
 </html>
